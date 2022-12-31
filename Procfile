@@ -1,1 +1,1 @@
-worker: python src/aguia-branca-etl.py
+worker: python src/etl.py
