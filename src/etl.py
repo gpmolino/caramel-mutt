@@ -36,7 +36,7 @@ schedule = IntervalSchedule(interval=timedelta(hours=TIME_INTERVAL_MINUTES))
 
 
 with Flow("click-bus-flow", schedule=schedule) as flow:
-    data = extract(FUTURE_DAYS)
+    data = extract(int(FUTURE_DAYS))
     load(data)
 
 flow.run()
