@@ -32,7 +32,7 @@ def load(data_collection):
             db.save_raw_data(origin=record['origin'], destination=record['destination'], date=record['date'], source=record['source'], gathered_at=record['gathered_at'], count_trips=record['count_trips'], trips=record['trips'])
 
 
-schedule = IntervalSchedule(interval=timedelta(hours=TIME_INTERVAL_MINUTES))
+schedule = IntervalSchedule(interval=timedelta(hours=int(TIME_INTERVAL_MINUTES)))
 
 
 with Flow("click-bus-flow", schedule=schedule) as flow:
