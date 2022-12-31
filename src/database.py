@@ -3,6 +3,7 @@ from sqlalchemy import Table, Column, Sequence, MetaData, Text, Date, TIMESTAMP,
 from sqlalchemy.sql import insert, select
 from sqlalchemy import create_engine
 import uuid
+
 import os
 
 DATABASE_URL = os.environ['DATABASE_URL']
